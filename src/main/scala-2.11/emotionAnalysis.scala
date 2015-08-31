@@ -1,23 +1,11 @@
-
-import org.apache.spark.streaming.{Seconds, StreamingContext}
-import org.apache.spark.streaming.twitter._
 import org.apache.spark.SparkConf
+import org.apache.spark.streaming.twitter.TwitterUtils
+import org.apache.spark.streaming.{Seconds, StreamingContext}
 
-object TwitterEmotionTags {
-
-  def matchEmotion(x: String): Any = x match {
-    case  "happy" => "happy"
-    case  "sad"   => "sad"
-    case  "hungry"=> "hungry"
-    case  "excite"=> "excite"
-    case  "angry"=> "angry"
-    case  "laugh"=> "laugh"
-    case  "depress"=> "depress"
-    case  "starv"=> "starve"
-    case  "upset"=> "upset"
-
-    case _        => None
-  }
+/**
+ * Created by kevin on 8/31/15.
+ */
+object emotionAnalysis {
 
   def main(args: Array[String]) {
     if (args.length < 4) {
@@ -36,11 +24,11 @@ object TwitterEmotionTags {
     System.setProperty("twitter4j.oauth.accessToken", accessToken)
     System.setProperty("twitter4j.oauth.accessTokenSecret", accessTokenSecret)
 
-    val sparkConf = new SparkConf().setAppName("TwitterEmotionTags").setMaster("local[2]")
+    val sparkConf = new SparkConf().setAppName("TwitterPopularTags").setMaster("local[2]")
     val ssc = new StreamingContext(sparkConf, Seconds(2))
     val stream = TwitterUtils.createStream(ssc, None, filters)
 
-    val hashTags = stream.flatMap(status => status.getText.split(" ").map(matchEmotion))
+    val hashTags = stream.flatMap(status => status.getText.split(" ").filter(_.startsWith("#")))
 
     val topCounts60 = hashTags.map((_, 1)).reduceByKeyAndWindow(_ + _, Seconds(60))
       .map{case (topic, count) => (count, topic)}
@@ -68,4 +56,3 @@ object TwitterEmotionTags {
     ssc.awaitTermination()
   }
 }
-// scalastyle:on println

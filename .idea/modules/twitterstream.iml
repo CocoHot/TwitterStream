@@ -153,8 +153,6 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" name="SBT: org.twitter4j:twitter4j-core:3.0.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.twitter4j:twitter4j-stream:3.0.3:jar" level="project" />
     <orderEntry type="library" name="SBT: com.101tec:zkclient:0.3:jar" level="project" />
     <orderEntry type="library" name="SBT: com.yammer.metrics:metrics-core:2.2.0:jar" level="project" />
     <orderEntry type="library" name="SBT: net.sf.jopt-simple:jopt-simple:3.2:jar" level="project" />
@@ -162,5 +160,7 @@
     <orderEntry type="library" name="SBT: org.apache.kafka:kafka_2.10:0.8.2.1:jar" level="project" />
     <orderEntry type="library" name="SBT: org.apache.spark:spark-streaming-kafka_2.10:1.4.1:jar" level="project" />
     <orderEntry type="library" name="SBT: org.apache.zookeeper:zookeeper:3.4.6:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.twitter4j:twitter4j-core:4.0.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.twitter4j:twitter4j-stream:4.0.4:jar" level="project" />
   </component>
 </module>

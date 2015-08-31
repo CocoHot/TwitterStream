@@ -4,7 +4,7 @@
 		module="twitterstream_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150830165033"
+		publication="20150830214547"
 	>
 		<description>
 		TwitterStream
@@ -35,8 +35,9 @@
 		<dependency org="org.apache.spark" name="spark-core_2.11" rev="1.4.1" conf="compile->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-streaming_2.11" rev="1.4.1" conf="compile->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-streaming-twitter_2.11" rev="1.4.1" conf="compile->default(compile)"/>
-		<dependency org="org.twitter4j" name="twitter4j-stream" rev="3.0.3" conf="compile->default(compile)"/>
-		<dependency org="org.apache.kafka" name="kafka_2.10" rev="0.8.0" conf="compile->default(compile)"/>
+		<dependency org="org.twitter4j" name="twitter4j-core" rev="4.0.4" conf="compile->default(compile)"/>
+		<dependency org="org.twitter4j" name="twitter4j-stream" rev="4.0.4" conf="compile->default(compile)"/>
+		<dependency org="org.apache.kafka" name="kafka_2.10" rev="0.8.2.0" conf="compile->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-streaming-kafka_2.10" rev="1.4.1" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
