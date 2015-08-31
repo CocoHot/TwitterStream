@@ -4,7 +4,7 @@
 		module="twitterstream$sources_javadoc_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150830214601"
+		publication="20150831014605"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -467,13 +467,21 @@
 			<artifact name="twitter4j-stream" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="twitter4j-stream" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
-		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.6" transitive="false" conf="compile->default(compile)">
-			<artifact name="slf4j-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="slf4j-api" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		<dependency org="org.apache.kafka" name="kafka_2.10" rev="0.8.2.1" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="kafka_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="kafka_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="com.yammer.metrics" name="metrics-core" rev="2.2.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="metrics-core" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="metrics-core" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="org.apache.kafka" name="kafka-clients" rev="0.8.2.1" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="kafka-clients" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="kafka-clients" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.6" transitive="false" conf="compile->default(compile)">
+			<artifact name="slf4j-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="slf4j-api" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="org.apache.zookeeper" name="zookeeper" rev="3.4.6" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="zookeeper" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -490,14 +498,6 @@
 		<dependency org="org.apache.spark" name="spark-streaming-kafka_2.10" rev="1.4.1" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="spark-streaming-kafka_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="spark-streaming-kafka_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
-		</dependency>
-		<dependency org="org.apache.kafka" name="kafka_2.10" rev="0.8.2.1" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
-			<artifact name="kafka_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="kafka_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
-		</dependency>
-		<dependency org="org.apache.kafka" name="kafka-clients" rev="0.8.2.1" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
-			<artifact name="kafka-clients" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="kafka-clients" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.10" transitive="false" conf="runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="slf4j-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
