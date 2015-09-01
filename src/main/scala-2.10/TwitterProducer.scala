@@ -63,7 +63,7 @@ object TwitterProducer {
           println(status.getUser.getScreenName + ": " + status.getText + "\n")
         }
         if (shouldSendTweetsToKafka) {
-          val data = new ProducerRecord[String, String]("twitter-stream", status.getText())
+          val data = new ProducerRecord[String, String]("twitter-stream", TwitterObjectFactory.getRawJSON(status))
           println(data)
           producer.send(data)
         }
@@ -79,17 +79,22 @@ object TwitterProducer {
       }
 
       def onException(ex: Exception) {
-        println("Pretending down Twitter stream...")
-        //twitterStream.shutdown()
+        println("EXCEPTION:" + ex)
+        twitterStream.shutdown()
       }
 
       def onStallWarning(warning: StallWarning) {
       }
     }
 
-    twitterStream.addListener(listener)
 
-    twitterStream.sample("en")
+    // add location filter, this will cover california  and most nevada
+    val fq = new FilterQuery()
+    fq.locations( Array(-124.482003, 32.528832), Array(-114.131211, 42.009517))
+
+    // start stream
+    twitterStream.addListener(listener)
+    twitterStream.filter(fq)
 
   }
 }

@@ -703,9 +703,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.8!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
-[debug] :: resolution report :: resolve 673ms :: artifacts dl 19ms
+[debug] :: resolution report :: resolve 1177ms :: artifacts dl 45ms
 [debug] 	report for default#twitterstream$sbt_2.10;1.0 default produced in /Users/kevin/IdeaProjects/TwitterStream/target/resolution-cache/reports/default-twitterstream$sbt_2.10-default.xml
-[debug] 	resolve done (673ms resolve - 19ms download)
+[debug] 	resolve done (1177ms resolve - 45ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#twitterstream$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -1069,6 +1069,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.8!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.8!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.8!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 106ms :: artifacts dl 15ms
+[debug] :: resolution report :: resolve 222ms :: artifacts dl 25ms
 [debug] 	report for default#twitterstream$sources_2.10;1.0 default produced in /Users/kevin/IdeaProjects/TwitterStream/target/resolution-cache/reports/default-twitterstream$sources_2.10-default.xml
-[debug] 	resolve done (106ms resolve - 15ms download)
+[debug] 	resolve done (222ms resolve - 25ms download)
