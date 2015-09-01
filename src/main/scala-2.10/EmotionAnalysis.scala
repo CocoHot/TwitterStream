@@ -1,5 +1,4 @@
 import org.apache.spark.SparkConf
-import org.apache.spark.rdd.RDD
 import org.apache.spark.streaming.kafka.KafkaUtils
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import twitter4j._
@@ -8,7 +7,7 @@ import org.apache.http.client.HttpClient
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.{HttpClientBuilder, DefaultHttpClient}
-;
+
 
 
 import scala.io.Source
@@ -54,7 +53,7 @@ object EmotionAnalysis {
 
     var negWordsCount = 0
     for (word <- negWords ) {
-      if (posWords.contains(word))
+      if (text.contains(word))
         negWordsCount += 1
     }
 
@@ -67,10 +66,16 @@ object EmotionAnalysis {
     val client = new DefaultHttpClient()
     val post = new HttpPost(webserver)
 
-    val content = f"{'cal': [${counts.head._1},${counts.head._2}], 'BA': [${counts.head._3},${counts.head._4}], 'LA': [${counts.head._5},${counts.head._6}] }"
+    //val content = f"{/\"California': [${counts.head._1},${counts.head._2}], 'Bay Area': [${counts.head._3},${counts.head._4}], 'Los Angles': [${counts.head._5},${counts.head._6}] }"
 
-//    val content = String.format("{\"cal\": [%i,%i], \"BA\": [%i,%i], \"LA\": [%i,%i] }", counts.head._1 , counts.head._2, counts.head._3, counts.head._4, counts.head._5, counts.head._6)
-    println(content)
+    //val content = "{\"cal\": [%i,%i], \"BA\": [%i,%i], \"LA\": [%i,%i] }".format(counts.head._1 , counts.head._2, counts.head._3, counts.head._4, counts.head._5, counts.head._6)
+
+    var content = "{\"california\": [%d,%d], \"bay area\": [%d,%d], \"los angles\": [%d,%d] }".format(counts(0)._1 , counts(0)._2, counts(0)._3, counts(0)._4, counts(0)._5, counts(0)._6)
+
+    if (counts.isEmpty){
+      content = "{\"cal\": [0,0], \"BA\": [0,0], \"LA\": [0,0] }"
+    }
+
     try {
       post.setEntity(new StringEntity(content))
       val response = client.execute(post)
@@ -115,7 +120,7 @@ object EmotionAnalysis {
                                              .reduceByKeyAndWindow(_ + _, Seconds(60))
 
     val calNegativeTweets = stemmedTweets.map( tweets => (tweets._1, calNegativeProcess(tweets._2) ) )
-    val calNegativeCounts = calPositiveTweets.map(tweets => ("group", tweets._2)) // ("calpositive", count)
+    val calNegativeCounts = calNegativeTweets.map(tweets => ("group", tweets._2)) // ("calnegative", count)
                                              .reduceByKeyAndWindow(_ + _, Seconds(60))
 
     // get bay area emotion word count
@@ -136,8 +141,8 @@ object EmotionAnalysis {
                                             .map(tweets => ("group", tweets._2))
                                             .reduceByKeyAndWindow(_ + _, Seconds(60))
 
-//    println("BA pos:")
-//    bayAreaPosCounts.print()
+    println("BA pos:")
+    bayAreaPosCounts.print()
 
     // only count left
     val bayAreaNegCounts = calNegativeTweets.filter( tweets => tweets._1(0)(0).getLatitude > BAY_AREA_LAT_S )
@@ -147,8 +152,8 @@ object EmotionAnalysis {
                                             .map(tweets => ("group", tweets._2))
                                             .reduceByKeyAndWindow(_ + _, Seconds(60))
 
-//    println("BA neg:")
-//    bayAreaNegCounts.print()
+    println("BA neg:")
+    bayAreaNegCounts.print()
 
     val losAnglesPosCounts = calPositiveTweets.filter( tweets => tweets._1(0)(0).getLatitude > LA_LAT_S )
                                               .filter( tweets => tweets._1(0)(0).getLatitude < LA_LAT_N )
@@ -171,8 +176,7 @@ object EmotionAnalysis {
 //    losAnglesNegCounts.print()
 
     val result = calPositiveCounts.join(calNegativeCounts)
-
-                                  .join(bayAreaPosCounts.join(bayAreaNegCounts) )
+                .join(bayAreaPosCounts.join(bayAreaNegCounts))
                                   .join(losAnglesPosCounts.join(losAnglesNegCounts) )
                                   .map(counts => (counts._2._1._1._1, counts._2._1._1._2, counts._2._1._2._1, counts._2._1._2._2, counts._2._2._1, counts._2._2._2))
 
@@ -185,7 +189,7 @@ object EmotionAnalysis {
     })
 
     result.foreachRDD(rdd => {
-      HTTPNotifier( rdd.collect.toList)
+      HTTPNotifier( rdd.collect().toList)
     })
 //    result.foreachRDD(HTTPNotifier(result))
 
