@@ -2,8 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29213c12-7328-4a2a-aeb0-541b15b1f002" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/TwitterProducer$.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/TwitterProducer$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala-2.10/TwitterProducer.scala" afterPath="$PROJECT_DIR$/src/main/scala-2.10/TwitterProducer.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$10.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$11.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$12.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$13.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$14.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$15.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$16.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$17.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$18.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$19.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$2.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$20.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$21.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$22.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$23.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$24.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$25.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$26.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$26.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$27.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$27.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$28.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$28.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$29.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$29.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$3.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$30.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$30.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$31.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$31.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$32.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$32.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$33.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$33.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$34.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$34.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$35.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$35.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$36.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$36.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$4.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$5.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$6.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$7.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$8.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$9.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$calNegativeProcess$1.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$calNegativeProcess$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$calPositiveProcess$1.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$calPositiveProcess$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$main$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$main$1$$anonfun$apply$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$main$1.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$main$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$main$2.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$main$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$stemmingProcess$1.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$$anonfun$stemmingProcess$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/EmotionAnalysis$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala-2.10/EmotionAnalysis.scala" afterPath="$PROJECT_DIR$/src/main/scala-2.10/EmotionAnalysis.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sbt_2.10-default.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sbt_2.10-default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_2.10-default.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_2.10-default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-sources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-twitterstream$sources_javadoc_2.10-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/twitterstream$sbt_2.10/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/twitterstream$sbt_2.10/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/twitterstream$sources_2.10/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/twitterstream$sources_2.10/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/twitterstream$sources_javadoc_2.10/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/twitterstream$sources_javadoc_2.10/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/twitterstream$sbt_2.10/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/twitterstream$sbt_2.10/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/twitterstream$sources_2.10/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/twitterstream$sources_2.10/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/twitterstream$sources_javadoc_2.10/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/twitterstream$sources_javadoc_2.10/1.0/resolved.xml.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TwitterStream.iws" />
@@ -59,21 +125,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TwitterProducer.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala-2.10/TwitterProducer.scala">
+      <file leaf-file-name="cityList.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cityList.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49271846">
-              <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="43" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmotionAnalysis.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala-2.10/EmotionAnalysis.scala">
+      <file leaf-file-name="TwitterProducer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala-2.10/TwitterProducer.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+              <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmotionAnalysis.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala-2.10/EmotionAnalysis.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.81796116">
+              <caret line="205" column="0" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,9 +160,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-              <folding>
-                <element signature="e#27#60#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -140,6 +214,7 @@
         <option value="$PROJECT_DIR$/src/main/scala-2.11/emotionAnalysis.scala" />
         <option value="$PROJECT_DIR$/src/main/scala-2.11/EmotionAnalysis.scala" />
         <option value="$PROJECT_DIR$/src/main/scala-2.10/KafkaWordCount.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala-2.10/TwitterProducer.scala" />
         <option value="$PROJECT_DIR$/src/stop-words.txt" />
         <option value="$PROJECT_DIR$/src/pos-words.txt" />
         <option value="$PROJECT_DIR$/src/neg-words.txt" />
@@ -147,7 +222,6 @@
         <option value="$PROJECT_DIR$/src/main/scala-2.10/TwitterPopularTags.scala" />
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/scala-2.10/EmotionAnalysis.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala-2.10/TwitterProducer.scala" />
       </list>
     </option>
   </component>
@@ -588,8 +662,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.EmotionAnalysis" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TwitterProducer" />
-        <item index="2" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
+        <item index="1" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TwitterProducer" />
         <item index="3" class="java.lang.String" itemvalue="Application.KafkaWordCount" />
         <item index="4" class="java.lang.String" itemvalue="Application.TwitterPopularTags" />
       </list>
@@ -742,9 +816,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-          <folding>
-            <element signature="e#27#60#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -800,9 +872,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="32" selection-end-column="36" />
-          <folding>
-            <element signature="e#27#60#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -867,27 +937,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cityList.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala-2.10/TwitterPopularTags.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-          <folding>
-            <element signature="e#27#60#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.10.4-sources.jar!/scala/collection/immutable/List.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala-2.10/TwitterProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33168316">
-          <caret line="336" column="0" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cityList.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03640777">
-          <caret line="1" column="43" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -900,18 +969,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala-2.10/EmotionAnalysis.scala">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.10.4-sources.jar!/scala/collection/immutable/List.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
-          <folding />
+        <state vertical-scroll-proportion="0.33168316">
+          <caret line="336" column="0" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala-2.10/TwitterProducer.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala-2.10/EmotionAnalysis.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49271846">
-          <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.81796116">
+          <caret line="205" column="0" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
           <folding />
         </state>
       </provider>
