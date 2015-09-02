@@ -61,7 +61,7 @@ object EmotionAnalysis {
   }
 
 
-  def HTTPNotifier(counts: List[(Int, Int, Int, Int, Int, Int)]): Unit ={
+  def HTTPNotifier(counts: List[(Int, Int, Int, Int, Int, Int, Int, Int)]): Unit ={
 
     val client = new DefaultHttpClient()
     val post = new HttpPost(webserver)
@@ -70,10 +70,10 @@ object EmotionAnalysis {
 
     //val content = "{\"cal\": [%i,%i], \"BA\": [%i,%i], \"LA\": [%i,%i] }".format(counts.head._1 , counts.head._2, counts.head._3, counts.head._4, counts.head._5, counts.head._6)
 
-    var content = "{\"california\": [%d,%d], \"bay area\": [%d,%d], \"los angles\": [%d,%d] }".format(counts(0)._1 , counts(0)._2, counts(0)._3, counts(0)._4, counts(0)._5, counts(0)._6)
+    var content = "{\"California\": [%d,%d], \"San Francisco\": [%d,%d], \"Los Angles\": [%d,%d], \"San Diego\": [%d,%d] }".format(counts(0)._1 , counts(0)._2, counts(0)._3, counts(0)._4, counts(0)._5, counts(0)._6, counts(0)._7, counts(0)._8 )
 
     if (counts.isEmpty){
-      content = "{\"cal\": [0,0], \"BA\": [0,0], \"LA\": [0,0] }"
+      content = "{\\\"California\\\": [0,0], \\\"San Francisco\\\": [0,0], \\\"Los Angles\\\": [0,0], \\\"San Diego\\\": [0,0] }\""
     }
 
     try {
@@ -106,22 +106,22 @@ object EmotionAnalysis {
     // 3rd filter: filter only english tweet
     // 4th map: get tuple3 (GeoLocation[][], text, modifiedText)
     val tweets = messages.map(_._2)
-                       .map(messages => TwitterObjectFactory.createStatus(messages) )
-                       .filter(_.getLang == "en")
-                       .map(status => (status.getPlace.getBoundingBoxCoordinates, status.getText, status.getText.replaceAll("[^a-zA-Z\\s]", "").trim().toLowerCase()) )
+      .map(messages => TwitterObjectFactory.createStatus(messages) )
+      .filter(_.getLang == "en")
+      .map(status => (status.getPlace.getBoundingBoxCoordinates, status.getText, status.getText.replaceAll("[^a-zA-Z\\s]", "").trim().toLowerCase()) )
 
 
     // (GeoLocation[][], postStopWordText)
     val stemmedTweets = tweets.map( tweets => (tweets._1, stemmingProcess(tweets._3)))
 
-    // get califonia emotion word count (GeoLocation[][], count)
+    // get california emotion word count (GeoLocation[][], count)
     val calPositiveTweets = stemmedTweets.map( tweets => (tweets._1, calPositiveProcess(tweets._2) ) )
     val calPositiveCounts = calPositiveTweets.map(tweets => ("group", tweets._2)) // ("calpositive", count)
-                                             .reduceByKeyAndWindow(_ + _, Seconds(60))
+      .reduceByKeyAndWindow(_ + _, Seconds(60))
 
     val calNegativeTweets = stemmedTweets.map( tweets => (tweets._1, calNegativeProcess(tweets._2) ) )
     val calNegativeCounts = calNegativeTweets.map(tweets => ("group", tweets._2)) // ("calnegative", count)
-                                             .reduceByKeyAndWindow(_ + _, Seconds(60))
+      .reduceByKeyAndWindow(_ + _, Seconds(60))
 
     // get bay area emotion word count
     val BAY_AREA_LAT_S  = 36.8
@@ -132,55 +132,77 @@ object EmotionAnalysis {
     val LA_LONG_W = -118.67
     val LA_LAT_N  = 34.304952
     val LA_LONG_E = -117.684889
+    val SD_LAT_S  = 32.553172
+    val SD_LONG_W = -117.329940
+    val SD_LAT_N  = 32.955272
+    val SD_LONG_E = -116.897580
 
     // only count left
     val bayAreaPosCounts = calPositiveTweets.filter( tweets => tweets._1(0)(0).getLatitude > BAY_AREA_LAT_S )
-                                            .filter( tweets => tweets._1(0)(0).getLatitude < BAY_AREA_LAT_N )
-                                            .filter( tweets => tweets._1(0)(1).getLongitude > BAY_AREA_LONG_W )
-                                            .filter( tweets => tweets._1(0)(1).getLongitude < BAY_AREA_LONG_E )
-                                            .map(tweets => ("group", tweets._2))
-                                            .reduceByKeyAndWindow(_ + _, Seconds(60))
+      .filter( tweets => tweets._1(0)(0).getLatitude < BAY_AREA_LAT_N )
+      .filter( tweets => tweets._1(0)(1).getLongitude > BAY_AREA_LONG_W )
+      .filter( tweets => tweets._1(0)(1).getLongitude < BAY_AREA_LONG_E )
+      .map(tweets => ("group", tweets._2))
+      .reduceByKeyAndWindow(_ + _, Seconds(60))
 
-    println("BA pos:")
-    bayAreaPosCounts.print()
+    //    println("BA pos:")
+    //    bayAreaPosCounts.print()
 
     // only count left
     val bayAreaNegCounts = calNegativeTweets.filter( tweets => tweets._1(0)(0).getLatitude > BAY_AREA_LAT_S )
-                                            .filter( tweets => tweets._1(0)(0).getLatitude < BAY_AREA_LAT_N )
-                                            .filter( tweets => tweets._1(0)(1).getLongitude > BAY_AREA_LONG_W )
-                                            .filter( tweets => tweets._1(0)(1).getLongitude < BAY_AREA_LONG_E )
-                                            .map(tweets => ("group", tweets._2))
-                                            .reduceByKeyAndWindow(_ + _, Seconds(60))
+      .filter( tweets => tweets._1(0)(0).getLatitude < BAY_AREA_LAT_N )
+      .filter( tweets => tweets._1(0)(1).getLongitude > BAY_AREA_LONG_W )
+      .filter( tweets => tweets._1(0)(1).getLongitude < BAY_AREA_LONG_E )
+      .map(tweets => ("group", tweets._2))
+      .reduceByKeyAndWindow(_ + _, Seconds(60))
 
-    println("BA neg:")
-    bayAreaNegCounts.print()
+    //    println("BA neg:")
+    //    bayAreaNegCounts.print()
 
     val losAnglesPosCounts = calPositiveTweets.filter( tweets => tweets._1(0)(0).getLatitude > LA_LAT_S )
-                                              .filter( tweets => tweets._1(0)(0).getLatitude < LA_LAT_N )
-                                              .filter( tweets => tweets._1(0)(1).getLongitude > LA_LONG_W )
-                                              .filter( tweets => tweets._1(0)(1).getLongitude < LA_LONG_E )
-                                              .map(tweets => ("group", tweets._2))
-                                              .reduceByKeyAndWindow(_ + _, Seconds(60))
+      .filter( tweets => tweets._1(0)(0).getLatitude < LA_LAT_N )
+      .filter( tweets => tweets._1(0)(1).getLongitude > LA_LONG_W )
+      .filter( tweets => tweets._1(0)(1).getLongitude < LA_LONG_E )
+      .map(tweets => ("group", tweets._2))
+      .reduceByKeyAndWindow(_ + _, Seconds(60))
 
-//    println("LA pos")
-//    losAnglesPosCounts.print()
+    //    println("LA pos")
+    //    losAnglesPosCounts.print()
 
     val losAnglesNegCounts = calNegativeTweets.filter( tweets => tweets._1(0)(0).getLatitude > LA_LAT_S )
-                                              .filter( tweets => tweets._1(0)(0).getLatitude < LA_LAT_N )
-                                              .filter( tweets => tweets._1(0)(1).getLongitude > LA_LONG_W )
-                                              .filter( tweets => tweets._1(0)(1).getLongitude < LA_LONG_E )
-                                              .map(tweets => ("group", tweets._2))
-                                              .reduceByKeyAndWindow(_ + _, Seconds(60))
+      .filter( tweets => tweets._1(0)(0).getLatitude < LA_LAT_N )
+      .filter( tweets => tweets._1(0)(1).getLongitude > LA_LONG_W )
+      .filter( tweets => tweets._1(0)(1).getLongitude < LA_LONG_E )
+      .map(tweets => ("group", tweets._2))
+      .reduceByKeyAndWindow(_ + _, Seconds(60))
 
-//    println("LA neg")
-//    losAnglesNegCounts.print()
+    //    println("LA neg")
+    //    losAnglesNegCounts.print()
+
+    val sanDiegoPosCounts = calPositiveTweets.filter( tweets => tweets._1(0)(0).getLatitude > SD_LAT_S )
+      .filter( tweets => tweets._1(0)(0).getLatitude < SD_LAT_N )
+      .filter( tweets => tweets._1(0)(1).getLongitude > SD_LONG_W )
+      .filter( tweets => tweets._1(0)(1).getLongitude < SD_LONG_E )
+      .map(tweets => ("group", tweets._2))
+      .reduceByKeyAndWindow(_ + _, Seconds(60))
+
+    //    println("LA pos")
+    //    losAnglesPosCounts.print()
+
+    val sanDiegoNegCounts = calNegativeTweets.filter( tweets => tweets._1(0)(0).getLatitude > SD_LAT_S )
+      .filter( tweets => tweets._1(0)(0).getLatitude < SD_LAT_N )
+      .filter( tweets => tweets._1(0)(1).getLongitude > SD_LONG_W )
+      .filter( tweets => tweets._1(0)(1).getLongitude < SD_LONG_E )
+      .map(tweets => ("group", tweets._2))
+      .reduceByKeyAndWindow(_ + _, Seconds(60))
 
     val result = calPositiveCounts.join(calNegativeCounts)
-                .join(bayAreaPosCounts.join(bayAreaNegCounts))
-                                  .join(losAnglesPosCounts.join(losAnglesNegCounts) )
-                                  .map(counts => (counts._2._1._1._1, counts._2._1._1._2, counts._2._1._2._1, counts._2._1._2._2, counts._2._2._1, counts._2._2._2))
+      .join(bayAreaPosCounts.join(bayAreaNegCounts) )
+      .join(losAnglesPosCounts.join(losAnglesNegCounts) )
+      .join(sanDiegoPosCounts.join(sanDiegoNegCounts) )
+      .map(counts => (counts._2._1._1._1._1, counts._2._1._1._1._2, counts._2._1._1._2._1, counts._2._1._1._2._2, counts._2._1._2._1, counts._2._1._2._2, counts._2._2._1, counts._2._2._2))
 
-//    result.print()
+    //    result.print()
 
     result.foreachRDD(rdd => {
 
@@ -191,7 +213,7 @@ object EmotionAnalysis {
     result.foreachRDD(rdd => {
       HTTPNotifier( rdd.collect().toList)
     })
-//    result.foreachRDD(HTTPNotifier(result))
+    //    result.foreachRDD(HTTPNotifier(result))
 
     // Start the computation
     ssc.start()
