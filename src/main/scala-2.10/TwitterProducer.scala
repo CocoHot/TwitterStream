@@ -64,7 +64,6 @@ object TwitterProducer {
         }
         if (shouldSendTweetsToKafka) {
           val data = new ProducerRecord[String, String]("twitter-stream", TwitterObjectFactory.getRawJSON(status))
-          println(data.value())
           producer.send(data)
         }
       }

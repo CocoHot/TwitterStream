@@ -4,7 +4,7 @@
 		module="twitterstream$sbt_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20150901174033"
+		publication="20150901220014"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>
