@@ -1,6 +1,10 @@
 # EMOTION ANALYSIS #
 
-Please follow the following steps to run the application
+This is a program that use Spark and Twitter Stream to analysis the emotion skill at different location.
+We pick Bay Area, Los Angles, and San Diago in this example.
+
+
+##Please follow the following steps to run the application##
 
 ### Kafka server setup ###
 * Step 1: Download the code
